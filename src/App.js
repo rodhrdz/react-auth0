@@ -1,11 +1,15 @@
 import './App.css';
-import { useAuth0 } from '@auth0/auth0-react';
+import { Loginbutton } from './components/Loginbutton';
+import { ProfileUser } from './components/ProfileUser';
+import { Logoutbutton } from './components/Logoutbutton';
 function App() {
-  const{loginWithRedirect} = useAuth0();
   return (
     <div className="App">    
     <h1>Application</h1>  
-    <button onClick={() => loginWithRedirect()}>Login</button>
+    <Loginbutton></Loginbutton>
+    <ProfileUser></ProfileUser>
+    <Logoutbutton></Logoutbutton>
+    
     </div>
   );
 }
